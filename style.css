@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    background-color: black;
+}
+.menu{
+    background-color: black;
+    width: 50%;
+    height: 60px;
+    margin: 2rem auto;
+
+}
+.list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.list li{
+    color: #069631;
+    font-size: 25px;
+    line-height: 60px;
+    position: relative;
+
+}
+.list li:hover{
+    text-shadow:2px 3px 10px #09cf44 ;
+}
+.list li::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 10px;
+    border: 2px solid rgb(4,227,71);
+    border-width: 2px 0 0 2px;
+    opacity: 0;
+    transition:all 0.3s;
+}
+.list li::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #069631;
+    border-width: 0px 2px 2px 0px;
+    opacity: 0;
+    transition:all 0.3s;
+}
+.list li:hover::after{
+    bottom: -2px;
+    right: -10px;
+    opacity: 1;
+}
+.list li:hover::before{
+    top: -2px;
+    left: -10px;
+    opacity: 1;
+}
+
+.btn{
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    background-color:#069631;
+    border: none;
+    position: absolute;
+    left: 200px;
+    top: 60%;
+    font-weight: bold;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #069631;
+    border-width: 2px 0 0 2px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid #069631;
+    border-width: 0 2px 2px 0;
+    opacity: 0;
+    transition: all 0.3s;
+    
+}
+.btn:hover{
+    background-color: black;
+    color: #069631;
+    text-shadow: 2px 3px 10px #09cf44;
+}
+.btn:hover::after{
+    bottom: -10px;
+    right: -10px;
+    opacity: 1;
+
+}
+.btn:hover::before{
+    top:-10px;
+    left: -10px;
+    opacity: 1;
+}
